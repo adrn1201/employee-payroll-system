@@ -1,4 +1,17 @@
 @php
+        $classes = 'ni';
+        $icon = 'fas';
+        $text = '';
+
+        if(Request::is('/')){
+            $classes = null;
+            $icon .= ' fa-home';
+            $text="Dashboard";
+        }
+        else if(Request::is('create-employee')){
+            $classes .= ' ni-fat-add';
+            $text="Create Employee";
+        }
 
 @endphp
 
