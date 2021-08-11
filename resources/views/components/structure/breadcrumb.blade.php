@@ -13,6 +13,16 @@
             $text="Create Employee";
         }
 
+        else if(Request::is('employee-records')){
+            $classes .= ' ni-single-02';
+            $text="Employee Records";
+        }
+        else if(Request::is('create-department')){
+            $classes .= ' ni-fat-add';
+            $text="Create Department";
+        }
+
+
 @endphp
 
 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
