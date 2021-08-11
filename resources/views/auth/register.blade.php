@@ -1,59 +1,86 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<x-structure.layout>
+    <x-structure.auth-navbar />
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <main class="main-content bg-default">
+        <x-structure.auth-header text="Sign up with your Credentials to get Started." />
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+        <x-structure.auth-form-container text="Sign up with your Credentials">
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+            <form role="form" method="POST" action="{{ route('register') }}">
+                @csrf
+                <div class="form-group">
+                    <div class="input-group input-group-merge input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                        </div>
+                        <x-input id="name" placeholder="Name" class="form-control" type="text" name="name" :value="old('name')" required autofocus />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-merge input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-tag"></i></span>
+                        </div>
+                        <x-input id="username" placeholder="Username" class="form-control" type="text" name="username" :value="old('username')" required autofocus />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-merge input-group-alternative">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <x-input id="email" placeholder="Email" class="form-control" type="email" name="email" :value="old('email')" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-merge input-group-alternative">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        <x-input id="password" class="form-control"
+                                 placeholder="Password"
+                                 type="password"
+                                 name="password"
+                                 required autocomplete="new-password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-merge input-group-alternative">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-key-25"></i></span>
+                        </div>
+                        <x-input id="password_confirmation" placeholder="Confirm Password" class="form-control"
+                                 type="password"
+                                 name="password_confirmation" required />
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-12">
+                        <div class="custom-control custom-control-alternative custom-checkbox">
+                            <x-input id="is_admin" class="custom-control-input"
+                                     type="checkbox"
+                                     name="is_admin" />
+                            <label class="custom-control-label" for="is_admin">
+                                <span class="text-muted">Is <a href="#!">Admin ?</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <x-button class="btn btn-primary mt-4">
+                        {{ __('Register') }}
+                    </x-button>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="text-muted" href="{{ route('login') }}">
+                        {{ __('Already registered?') }}
+                    </a>
+                </div>
+            </form>
+        </x-structure.auth-form-container>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
+    </main>
+    <x-structure.auth-footer />
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</x-structure.layout>
