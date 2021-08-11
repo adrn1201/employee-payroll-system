@@ -24,6 +24,10 @@
             $classes .= ' ni-pin-3';
             $text= "Department Records";
         }
+        else if(Request::is('record')) {
+            $classes .= ' ni-single-02';
+            $text= "Matched Records";
+        }
 
 
 @endphp
