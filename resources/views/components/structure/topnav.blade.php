@@ -4,8 +4,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <!-- Search form -->
-            <form method="GET" action="/record" class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <form method="GET" action="/matched" class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
                 @csrf
+
+                @if (request('department'))
+                    <input type="hidden" name="department" value="{{ request('department') }}">
+                @endif
+
                 <div class="form-group mb-0">
                     <div class="input-group input-group-alternative input-group-merge">
                         <div class="input-group-prepend">

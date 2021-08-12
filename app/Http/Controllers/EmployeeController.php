@@ -14,15 +14,14 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        return view('index', [
-            'lists' => Employee::paginate(15),
-            'deps' => Department::paginate(15),
+        return view('employee.index', [
+            'employees' => Employee::paginate(15),
         ]);
     }
 
     public function create()
     {
-        return view('create');
+        return view('employee.create');
     }
 
     public function store()
@@ -38,7 +37,7 @@ class EmployeeController extends Controller
 
     public function edit(Employee $employee)
     {
-      return view('edit', ['employee' => $employee]);
+      return view('employee.edit', ['employee' => $employee]);
 
     }
 
