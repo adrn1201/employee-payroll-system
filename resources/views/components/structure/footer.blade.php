@@ -1,4 +1,4 @@
-<!-- Footer -->
+{{-- Footer --}}
 <footer class="footer pt- mt-4">
     <div class="row align-items-center justify-content-lg-between">
         <div class="col-lg-12">

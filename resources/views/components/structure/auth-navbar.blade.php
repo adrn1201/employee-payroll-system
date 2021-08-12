@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="/">
-                            <img src="{{asset("assets/img/brand/YPG Logo2.png ")}}">
+                            <img src="{{asset("assets/img/brand/YPGLogo.png")}}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">

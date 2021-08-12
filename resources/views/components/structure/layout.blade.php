@@ -8,19 +8,19 @@
     <meta name="author" content="Creative Tim">
     <title>EPS</title>
 
-    <!-- Favicon -->
+    {{-- Favicon --}}
     <link rel="icon" href="{{ asset('assets/img/brand/YPGLogo.png') }}" type="image/png">
-    <!-- Fonts -->
+    {{-- Fonts --}}
     <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}">
-    <!-- Icons -->
+    {{-- Icons --}}
     <link rel="stylesheet" href="{{ asset('assets/vendor/nucleo/css/nucleo.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
-    <!-- Page plugins -->
-    <!-- Argon CSS -->
+    {{-- Page plugins --}}
+    {{-- Argon CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/argon.css?v=1.2.0') }}" type="text/css">
     <link href="{{ asset('vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
+    {{-- Font special for pages--}}
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i') }}" rel="stylesheet">
 
 </head>

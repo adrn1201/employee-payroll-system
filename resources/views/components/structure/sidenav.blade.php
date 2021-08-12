@@ -10,7 +10,7 @@
             <div class="navbar-inner">
                 {{-- Collapse --}}
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-                    <!-- Nav items -->
+                    {{-- Nav items --}}
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <x-structure.class :active="request()->is('/')" href="/">
