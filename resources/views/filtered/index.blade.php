@@ -45,35 +45,35 @@
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
-                                @foreach($employees as $list)
+                                @foreach($employees as $emp)
                                     <tbody>
                                     <tr>
                                         <th scope="row">
-                                            {{$list->first_name}} {{$list->last_name}}
+                                            {{$emp->first_name}} {{$emp->last_name}}
                                         </th>
                                         <td>
-                                            {{$list->department->name}}
+                                            {{$emp->department->name}}
                                         </td>
                                         <td>
-                                            {{$list->hours_worked}}
+                                            <x-table-icon hours="{{$emp->hours_worked}}"/> {{$emp->hours_worked}}
                                         </td>
                                         <td>
-                                            <i class="fas fa-arrow-up text-success mr-3"></i> {{$list->hourly_rate}}
+                                            {{$emp->hourly_rate}}
                                         </td>
                                         <td>
-                                            <i class="fas fa-arrow-up text-success mr-3"></i> {{$list->basic_pay}}
+                                            <x-table-icon hours="{{$emp->hours_worked}}"/> {{$emp->basic_pay}}
                                         </td>
                                         <td>
-                                            <i class="fas fa-arrow-up text-success mr-3"></i>  {{$list->overtime_pay}}
+                                            <x-table-icon hours="{{$emp->hours_worked}}"/>  {{$emp->overtime_pay}}
                                         </td>
                                         <td>
-                                            {{$list->gross_pay}}
+                                            {{$emp->gross_pay}}
                                         </td>
                                         <td>
-                                            {{$list->tax}}
+                                            {{$emp->tax}}
                                         </td>
                                         <td>
-                                            {{$list->net_pay}}
+                                            {{$emp->net_pay}}
                                         </td>
                                         <td class="text-right">
                                             <div class="dropdown">
@@ -81,8 +81,8 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item " href="/employees/{{ $list->id }}/edit">Edit</a>
-                                                    <form method="POST" action="/employees/{{$list->id}}">
+                                                    <a class="dropdown-item " href="/employees/{{ $emp->id }}/edit">Edit</a>
+                                                    <form method="POST" action="/employees/{{$emp->id}}">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button class="dropdown-item">Delete</button>

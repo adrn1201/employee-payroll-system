@@ -24,7 +24,7 @@
             $classes .= ' ni-pin-3';
             $text= "Department Records";
         }
-        else if(Request::is('record')) {
+        else if(Request::is('matched')) {
             $classes .= ' ni-single-02';
             $text= "Matched Records";
         }
@@ -36,6 +36,6 @@
 @endphp
 
 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-    <li class="breadcrumb-item"><a href="#"><i {{ $attributes(['class' => $classes ?? $icon  ])}}></i></a></li>
-    <li class="breadcrumb-item"><a href="#">{{$text}}</a></li>
+    <li class="breadcrumb-item"><a href="{{ request()->url() }}"><i {{ $attributes(['class' => $classes ?? $icon  ])}}></i></a></li>
+    <li class="breadcrumb-item"><a href="{{ request()->url() }}">{{$text}}</a></li>
 </ol>

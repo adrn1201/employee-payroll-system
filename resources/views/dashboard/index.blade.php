@@ -57,16 +57,16 @@
                                                 {{$emp->department->name}}
                                             </td>
                                             <td>
-                                                {{$emp->hours_worked}}
+                                                <x-table-icon hours="{{$emp->hours_worked}}"/> {{$emp->hours_worked}}
                                             </td>
                                             <td>
-                                                <i class="fas fa-arrow-up text-success mr-3"></i> {{$emp->hourly_rate}}
+                                                 {{$emp->hourly_rate}}
                                             </td>
                                             <td>
-                                                <i class="fas fa-arrow-up text-success mr-3"></i> {{$emp->basic_pay}}
+                                                <x-table-icon hours="{{$emp->hours_worked}}"/> {{$emp->basic_pay}}
                                             </td>
                                             <td>
-                                                <i class="fas fa-arrow-up text-success mr-3"></i>  {{$emp->overtime_pay}}
+                                                <x-table-icon hours="{{$emp->hours_worked}}"/>  {{$emp->overtime_pay}}
                                             </td>
                                             <td>
                                                 {{$emp->gross_pay}}
