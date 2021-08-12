@@ -1,6 +1,6 @@
 @props(['text'])
 <section class="container mt--8 pb-5">
-    <!-- Table -->
+    {{-- Table --}}
     <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
             <div class="card bg-secondary border-0">

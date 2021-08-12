@@ -1,5 +1,5 @@
 <x-structure.layout>
-    <x-structure.sidenav class="sidenav" {{--:active="request()->is('create-employee')"--}} />
+    <x-structure.sidenav class="sidenav" />
 
     <main class="main-content" id="panel">
         <x-structure.topnav/>

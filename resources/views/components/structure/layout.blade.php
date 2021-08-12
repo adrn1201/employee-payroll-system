@@ -9,7 +9,7 @@
     <title>EPS</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/img/brand/YPG Logo2.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset("assets/img/brand/YPG Logo2.png ") }}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}">
     <!-- Icons -->
@@ -23,9 +23,6 @@
     <!-- Font special for pages-->
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i') }}" rel="stylesheet">
 
-    <!-- Vendor CSS-->
-    <link href="{{ asset('vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
-    <link href="{{ asset('vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
 </head>
 
 <body>

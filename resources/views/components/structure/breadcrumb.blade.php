@@ -33,8 +33,6 @@
              $icon .= ' fa-edit';
              $text="Edit Record";
         }
-
-
 @endphp
 
 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">

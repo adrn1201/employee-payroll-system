@@ -1,6 +1,5 @@
 @props(['label'])
-<!-- Header -->
-<!-- Header -->
+{{-- Header --}}
 <header class="header bg-primary pb-6">
     <div class="container-fluid">
         <div class="header-body">
@@ -15,12 +14,12 @@
                     <x-department-dropdown />
                 </div>
             </div>
-            <!-- Card stats -->
+            {{--Card Count--}}
             @if(Request::is('/'))
                 <div class="row">
                     <div class="col-xl-6 col-md-6">
                         <div class="card card-stats">
-                            <!-- Card body -->
+                            {{-- Card body --}}
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
@@ -38,7 +37,7 @@
                     </div>
                     <div class="col-xl-6 col-md-6">
                         <div class="card card-stats">
-                            <!-- Card body -->
+                            {{-- Card body --}}
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">

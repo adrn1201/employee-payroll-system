@@ -1,14 +1,14 @@
 
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
         <div class="scrollbar-inner">
-            <!-- Brand -->
+            {{-- Brand --}}
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
                     <img src="{{asset("assets/img/brand/YPG Logo2.png ")}}" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
-                <!-- Collapse -->
+                {{-- Collapse --}}
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <!-- Nav items -->
                     <ul class="navbar-nav">

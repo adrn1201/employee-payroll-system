@@ -11,8 +11,8 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard.index', [
-            'employees' => Employee::paginate(15),
-            'deps' => Department::paginate(15),
+            'employees' => Employee::limit(5)->get(),
+            'deps' => Department::limit(5)->get(),
         ]);
     }
 }

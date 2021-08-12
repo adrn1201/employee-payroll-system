@@ -1,9 +1,9 @@
-<!-- Topnav -->
+{{-- Topnav --}}
 <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <!-- Search form -->
+            {{-- Search Form--}}
             <form method="GET" action="/matched" class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
                 @csrf
 
@@ -25,11 +25,11 @@
                 </button>
             </form>
 
-            <!-- Navbar links -->
+            {{-- Navbar Links --}}
             <ul class="navbar-nav align-items-center  ml-md-auto ">
                 <li class="nav-item d-xl-none">
 
-                    <!-- Sidenav toggler -->
+                    {{-- Sidenav Toggler--}}
                     <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
                         <div class="sidenav-toggler-inner">
                             <i class="sidenav-toggler-line"></i>
@@ -49,7 +49,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                             <div class="media-body  ml-2  d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">Welcome, {{ auth()->user()->name }}! <i class="ni ni-bold-down"></i> </span>
+                                <span class="mb-0 text-sm  font-weight-bold">Welcome, {{ auth()->user()->name }}! <i class="ni ni-bold-down"></i></span>
                             </div>
                         </div>
                     </a>
@@ -60,7 +60,6 @@
                         <div class="dropdown-divider"></div>
                         <form id="logout-form" method="POST" action="/logout" class="hidden">
                             @csrf
-
                             <Button type="submit" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 Logout

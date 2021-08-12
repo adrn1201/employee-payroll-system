@@ -10,8 +10,8 @@
             <div class="navbar-collapse-header">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="dashboard.html">
-                            <img src="../assets/img/brand/blue.png">
+                        <a href="/">
+                            <img src="{{asset("assets/img/brand/YPG Logo2.png ")}}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">

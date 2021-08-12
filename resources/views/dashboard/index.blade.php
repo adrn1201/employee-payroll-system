@@ -1,6 +1,6 @@
 <x-structure.layout>
 
-    <x-structure.sidenav class="sidenav" :active="request()->is('')" />
+    <x-structure.sidenav class="sidenav" />
 
     {{-- Main content --}}
     <main class="main-content" id="panel">
@@ -125,7 +125,9 @@
                                     <tr>
                                         <th scope="col">Name</th>
                                         <th scope="col">Slug</th>
-                                        <th scope="col"></th>
+                                        @if(auth()->user()->is_admin)
+                                            <th scope="col"></th>
+                                        @endif
                                     </tr>
                                 </thead>
                                 @foreach($deps as $dep)
@@ -137,21 +139,23 @@
                                             <td>
                                                 {{$dep->slug}}
                                             </td>
-                                            <td class="text-right">
-                                                <div class="dropdown">
-                                                    <a class="btn btn-sm btn-icon-only text-info" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item " href="/departments/{{ $dep->id }}/edit">Edit</a>
-                                                        <form method="POST" action="/departments/{{$dep->id}}">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button class="dropdown-item">Delete</button>
-                                                        </form>
+                                            @if(auth()->user()->is_admin)
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a class="btn btn-sm btn-icon-only text-info" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item " href="/departments/{{ $dep->id }}/edit">Edit</a>
+                                                            <form method="POST" action="/departments/{{$dep->id}}">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button class="dropdown-item">Delete</button>
+                                                            </form>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
+                                                </td>
+                                            @endif
                                         </tr>
                                     </tbody>
                                 @endforeach
