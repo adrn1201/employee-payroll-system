@@ -9,7 +9,7 @@
     <title>EPS</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset("assets/img/brand/YPG Logo2.png ") }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/img/brand/YPGLogo.png') }}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}">
     <!-- Icons -->

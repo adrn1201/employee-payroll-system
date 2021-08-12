@@ -4,7 +4,7 @@
             {{-- Brand --}}
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="{{asset("assets/img/brand/YPG Logo2.png ")}}" class="navbar-brand-img" alt="...">
+                    <img src="{{asset("assets/img/brand/YPGLogo.png")}}" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
