@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('index', [
+        return view('dashboard.index', [
             'employees' => Employee::paginate(15),
             'deps' => Department::paginate(15),
         ]);
