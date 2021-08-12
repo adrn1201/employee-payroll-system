@@ -23,7 +23,7 @@ class Employee extends Model
 
         $query->when($filters['department'] ?? false, fn($query, $department) =>
             $query->whereHas('department',  fn($query) =>
-                $query->where('name', $department)
+                $query->where('slug', $department)
 
             )
         );

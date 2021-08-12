@@ -16,10 +16,4 @@ class RecordsFilterController extends Controller
         ]);
     }
 
-    public function show(Employee $employees)
-    {
-        return view('kakaindex', [
-            'employee'=> $employees
-        ]);
-    }
 }

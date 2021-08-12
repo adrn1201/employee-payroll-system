@@ -28,6 +28,11 @@
             $classes .= ' ni-single-02';
             $text= "Matched Records";
         }
+        else{
+             $classes = null;
+             $icon .= ' fa-edit';
+             $text="Edit Record";
+        }
 
 
 @endphp
